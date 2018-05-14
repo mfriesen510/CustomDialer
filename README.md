@@ -15,6 +15,24 @@ Changelog
 ----------
 v0.0.1: First Version to generate a Custom Dialer for everyone.
 
+Call Example
+----------
+```QML
+CustomDialer {
+    id: frequencyDial
+    anchors.centerIn: parent
+
+    title: qsTr("Frequency:")
+
+    dialValue: frequency //Property from Class
+
+    minValue: minFrequency //Property from Class
+    maxValue: maxFrequency //Property from Class
+
+    color: dialerColor //Customized Color for the Dialer
+}
+```
+
 Background / Motivation
 ----------
 After many invalid Searchresults with Google to find a Custom Dialer vor QT/QML, i decided to create my own one.
