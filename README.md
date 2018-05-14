@@ -19,6 +19,8 @@ Background / Motivation
 ----------
 After many invalid Searchresults with Google to find a Custom Dialer vor QT/QML, i decided to create my own one.
 
+This is my First Try to get Active in GitHub. Please lead me to any Issues or License Problems. Thank You.
+
 License
 ----------
 GPLv3
