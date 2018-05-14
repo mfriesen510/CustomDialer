@@ -26,8 +26,8 @@ CustomDialer {
 
     dialValue: frequency //Property from Class
 
-    minValue: minFrequency //Property from Class
-    maxValue: maxFrequency //Property from Class
+    minValue: 0
+    maxValue: 1250
 
     color: dialerColor //Customized Color for the Dialer
 }
