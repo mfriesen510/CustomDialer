@@ -48,40 +48,55 @@ Item {
     property int maxValue: 0.0
     /*!
      \qmlproperty int dialValue
+     \brief Current Dialer Value.
      */
     property int dialValue: 0.0
     /*!
      \qmlproperty alias titel
+     \brief Shown Text Above the Dialer Canvas
      */
     property alias title: customDialTitleText.text
     /*!
      \qmlproperty color color
+     \brief Color of the Canvas and Text
      */
     property color color: "#AAAAAA"
 
     //PRIVATE
     /*!
      \qmlproperty double hCascade
+     \brief local Variable to vertical Cascade the Box for the Dialer
      */
     readonly property double hCascade: height / 32
     /*!
      \qmlproperty double wCascade
+     \brief local Variable to horizontal Cascade the Box for the Dialer
      */
     readonly property double wCascade: width / 32
     /*!
      \qmlproperty double radius
+     \brief local Variable for the radius depending the vertical Cascade
+
+     \sa{hCascade}
      */
     readonly property double radius: 18 * hCascade;
     /*!
      \qmlproperty double centerX
+     \brief local Variable for the horizontal Center of the Dialer Canvas depending the horizontal Cascade
+
+     \sa{wCascade}
      */
     readonly property double centerX: 16 * wCascade;
     /*!
      \qmlproperty double centerY
+     \brief local Variable for the vertical Center of the Dialer Canvas depending the vertical Cascade
+
+     \sa{wCascade}
      */
     readonly property double centerY: 22 * hCascade;
     /*!
      \qmlproperty double dialerWidth
+     \brief width of the Dialer Needle
      */
     readonly property double dialerWidth: 2 * hCascade
 
