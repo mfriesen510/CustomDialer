@@ -3,7 +3,7 @@ import QtQuick.Layouts 1.1
 import QtQuick.Controls 1.4
 
 /*!
- \qmltype Dial
+ \qmltype CustomDialer
  \ingroup Controle
 
  \brief This is a Dial Visualisation with a minimum on 0 and Maximum on 180 Degree.
@@ -60,6 +60,10 @@ Item {
      \qmlproperty double centerY
      */
     readonly property double centerY: 22 * hCascade;
+    /*!
+     \qmlproperty double dialerWidth
+     */
+    readonly property double dialerWidth: 2 * hCascade
 
     Rectangle {
         id: dialCanvasBackground
@@ -115,7 +119,7 @@ Item {
                 var degree;
 
                 context.beginPath()
-                context.arc(centerX, centerY, radius, (2 * Math.PI + Math.PI / 64), (Math.PI - (Math.PI / 64)), true)
+                context.arc(customDialRoot.centerX, customDialRoot.centerY, customDialRoot.radius, (2 * Math.PI + Math.PI / 64), (Math.PI - (Math.PI / 64)), true)
                 context.stroke()
                 context.restore()
                 var x1, y1, x2, y2, length;
@@ -146,10 +150,10 @@ Item {
 
                     }
 
-                    x1 = centerX + (radius + length) * Math.cos((((degree) * Math.PI) / 180));
-                    x2 = centerX + (radius - length) * Math.cos((((degree) * Math.PI) / 180));
-                    y1 = centerY - (radius + length) * Math.sin((((degree) * Math.PI) / 180));
-                    y2 = centerY - (radius - length) * Math.sin((((degree) * Math.PI) / 180));
+                    x1 = customDialRoot.centerX + (customDialRoot.radius + length) * Math.cos((((degree) * Math.PI) / 180));
+                    x2 = customDialRoot.centerX + (customDialRoot.radius - length) * Math.cos((((degree) * Math.PI) / 180));
+                    y1 = customDialRoot.centerY - (customDialRoot.radius + length) * Math.sin((((degree) * Math.PI) / 180));
+                    y2 = customDialRoot.centerY - (customDialRoot.radius - length) * Math.sin((((degree) * Math.PI) / 180));
 
                     context.moveTo(x1, y1);
                     context.lineTo(x2, y2);
@@ -161,14 +165,14 @@ Item {
                 var x, y;
 
                 context.moveTo(centerX, centerY);
-                x = centerX - (wCascade * Math.cos((((angle - 45) * Math.PI) / 180)))
-                y = centerY - (2 * hCascade * Math.sin((((angle - 45) * Math.PI) / 180)))
+                x = centerX - (dialerWidth * Math.cos((((angle - 45) * Math.PI) / 180)))
+                y = centerY - (dialerWidth * Math.sin((((angle - 45) * Math.PI) / 180)))
                 context.lineTo(x, y);
                 x = centerX - radius * Math.cos((((angle) * Math.PI) / 180));
                 y = centerY - radius * Math.sin((((angle) * Math.PI) / 180));
                 context.lineTo(x, y);
-                x = centerX - (wCascade * Math.cos((((angle + 45) * Math.PI) / 180)))
-                y = centerY - (2 * hCascade * Math.sin((((angle + 45) * Math.PI) / 180)))
+                x = centerX - (dialerWidth * Math.cos((((angle + 45) * Math.PI) / 180)))
+                y = centerY - (dialerWidth * Math.sin((((angle + 45) * Math.PI) / 180)))
                 context.lineTo(x, y);
                 context.fill();
                 context.stroke();
