@@ -47,4 +47,4 @@ License
 ----------
 GPLv3
 
-[dialer]: https://raw.github.com/mfriesen510/CustomDialer/branch/Commit-CustomDialer/dial.png
+[dialer]: https://github.com/mfriesen510/CustomDialer/blob/Commit-CustomDialer/Dial.png
