@@ -1,7 +1,7 @@
 # CustomDialer
 This is a Dial Visualisation with a minimum on 0 and Maximum on 180 Degree.
 
-Desctiption
+Description
 ----------
 To keep this Custom Dialer as dynamic as possible, i started to generate the Propertys minValue and maxValue. Both Values will be compared with the Property dialValue and set the angle for the Dialer Transition. 
 
