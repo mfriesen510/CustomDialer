@@ -39,6 +39,12 @@ After many invalid Searchresults with Google to find a Custom Dialer vor QT/QML,
 
 This is my First Try to get Active in GitHub. Please lead me to any Issues or License Problems. Thank You.
 
+Screenshot
+----------
+![Custom Dialer Screenshot][dialer]
+
 License
 ----------
 GPLv3
+
+[dialer]: https://raw.github.com/mfriesen510/CustomDialer/branch/Commit-CustomDialer/dial.png
